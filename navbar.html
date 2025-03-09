@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar experiment</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+        html, body {
+        overflow-x: hidden;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        }
+        body{
+            font-family: "Inter", sans-serif;
+            /*background-color: black;*/
+            color: white;
+            animation-name: body;
+            animation-duration: 1s;
+            animation-delay: 1s;
+        }
+        #black{
+            background-color: black;
+        }
+        h1{
+            /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+            font-size: 90px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-left: 30px;
+            font-weight: 450;
+            animation-name: h1;
+            animation-duration: 0.5s;
+            animation-play-state: view();
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        @keyframes h1{
+            0%{
+                opacity: 0%;
+                transform: translateY(30px);
+            }
+            100%{
+                opacity: 100%;
+                transform: translateY(0px);
+            }
+        }
+        @keyframes h2{
+            0%{
+                opacity: 0%;
+                transform: translateX(30px);
+            }
+            100%{
+                opacity: 100%;
+                transform: translateX(0px);
+            }
+        }
+        @keyframes h3{
+            0%{
+                opacity: 0%;
+                transform: translateX(-30px);
+            }
+            100%{
+                opacity: 100%;
+                transform: translateX(0px);
+            }
+        }
+        h2{
+            /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+            font-size: 90px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: 30px;
+            font-weight: 450;
+            animation-name: h2;
+            animation-duration: 1s;
+            animation-play-state: view();
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        h3{
+            /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+            font-size: 90px;
+            margin-top: 0px;
+            margin-left: 860px;
+            font-weight: 450;
+            animation-name: h3;
+            animation-duration: 1.5s;
+            animation-play-state: view();
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        h4{
+            margin-left: 1330px;
+            font-style: inherit;
+            font-weight: 450;
+            margin-bottom: 25px;
+            font-size: 13px;
+            animation-name: h1;
+            animation-duration: 2s;
+            animation-play-state: view();
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        h5{
+            /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+            font-size: 50px;
+            margin-bottom: 0.2rem;
+            margin-top: 20rem;
+            font-weight: 100;
+            margin-left: 30px;
+            font-weight: 450;
+            animation-name: h1;
+            animation-duration: 1s;
+            animation-play-state: view();
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        h6{
+            /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+            font-size: 40px;
+            margin-top: 20rem;
+            font-weight: 100;
+            margin-left: 30px;
+            animation-name: h1;
+            animation-duration: 1s;
+            animation-play-state: view();
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            /*animation-name: first;
+            animation-timeline: view();
+            animation-range: entry 10px cover 80%;*/
+            margin-bottom: 10px;
+            font-weight: 450;
+        }
+        #h7{
+            /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+            font-size: 330px;
+            margin-bottom: 0px;
+            margin-top: 0px;
+            margin-left: 40px;
+            font-weight: 450;
+        }
+        #h8{
+            /*font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;*/
+            font-size: 330px;
+            margin-bottom: 0.2rem;
+            margin-top: -10px;
+            font-weight: 450;
+        }
+        #h9{
+            font-size: 60px;
+            margin-top: 240px;
+            margin-left: 50px;
+            font-weight: 450;
+            color: black;
+        }
+        #h10{
+            color: black;
+            font-size: 15px;
+            margin-left: 50px;
+        }
+        #h11{
+            font-size: 450px;
+            color: black;
+            margin-left: 100px;
+            margin-top: 180px;
+        }
+        nav{
+            background-color: black;
+            padding: 1rem 0;
+            
+            
+        }
+        nav ul{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            margin-top: 0.2rem;
+        }
+        .nav-left, .nav-right{
+            display: flex;
+            align-items: top;
+            justify-content: space-between;
+        }
+        nav ul li{
+            margin: 0px 15px;      
+        }
+        #logo a{
+            color: white;
+            text-decoration: none;
+            font-size: 25px;
+        }
+        #button button {
+            background-color: #DBFF00;
+            border-radius: 1rem;
+            font-size: 0.8rem;
+            font-weight: 550;
+            padding: 7.5px 15px;
+            text-decoration: none;
+            transition: background-color 0.5s ease-in-out;
+        }
+        #button button a{
+            color: black;
+            text-decoration: none;
+            transition: color 0.5s ease-in-out;
+        }
+        #button button:hover{
+            background-color: black;
+        }
+        #button button:hover a{
+            color: white;
+        }
+        #colon a{
+            font-size: 30px;
+            font-weight: 1000;
+            padding-top: 0;
+            text-decoration: none;
+            color: white;
+        }
+        #colon a:hover{
+            color:#DBFF00;
+        }
+        video{
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            animation-name: h1;
+            animation-duration: 2.5s;
+            animation-play-state: view();
+            animation-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+            /*animation-name: fadeInVideo;
+            animation-duration: 1.8s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;*/
+        }
+        @keyframes first{
+            from{
+                scale: 0.8;
+            }
+            to{
+                scale: 1;
+            }
+        }
+        #banana{
+            border-radius: 1.4rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            padding: 0px 20px;
+            background-color: black;
+            color: white;
+            transition: ease;
+            transition-duration: 0.8s;
+            border-color: white;
+            border-width: 0.1px;
+        }
+        #banana:hover{
+            background-color: white;
+            color: black;
+        }
+        #orange{
+            display: flex;
+            justify-content: space-between;
+            margin-right: 80px;
+            margin-left: 40px;
+            align-items: center;
+            margin-top: -80px;
+        }
+        #mango{
+            position: relative;
+        }
+        #mango::after{
+            content: '';
+            background: #9f9f9f;
+            height: 1px;
+            width: 80%;
+            position: absolute;
+            bottom: 20px;
+            right: 100px;
+        }
+        table,th,td{
+            height: 600px;
+            width: 100%;
+            border: 1px solid white;
+            table-layout: fixed;
+            border-collapse: collapse;
+        }
+        th,td{
+            padding: 70px;
+            font-size: 50px;
+            font-weight: 450;
+        }
+        @keyframes second{
+            0%{
+                transform: rotate(0deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        #new{
+            animation-name: second;
+            animation-duration: 47s;
+            animation-iteration-count: infinite;
+        }
+        #img{
+            width: 1500px;
+            margin-top: 100px;
+        }
+        @keyframes fadeInVideo {
+            0% {
+                opacity: 0;
+                transform: scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <div class="nav-left">
+            <li id="logo"><a href="http://127.0.0.1:5500/navbar.html">🚀</a></li>
+            </div>
+            <div class="nav-right">
+            <li id="button"><button><a href="http://127.0.0.1:5500/navbar.html">Get in touch</a></button></li>
+            <li id="colon"><a href="http://127.0.0.1:5500/navbar.html">::</a></li>
+            </div>
+        </ul>
+    </nav>
+    <section>
+        <div id="black">
+        <h1>
+            Digital
+        </h1>
+        <h2>
+            experiences <div style="display: inline; color: #9f9f9f ; font-size: small;">_____________________________________________________________________________________________________________________________</div> that
+        </h2>
+        <h3>
+            Win by Design<sup style="font-size: 1rem;">TM</sup>
+        </h3>
+        <h4>Check out the hype<div style="display: inline; font-size: 0.8em; margin-left: 0.5rem; font-style: inherit;">↓</div></h4>
+        <video autoplay loop muted>
+            <source src="1.mp4">
+        </video>
+        <h5>
+            RocketAir is a design and strategy<br> company with an adaptive approach<br> to problem solving.
+        </h5>
+        <h6>
+            We call it  <div id="mango" display: inline; color: #9f9f9f;"></div>
+        </h6>
+        <p id="h7">
+            ORBITAL <br>
+        </p>
+        <div id="orange">
+        <p id="h8">
+            DESIGN
+        </p>
+        <button id="banana" style="height: 50px;"> Get to know us</button></div>
+        <table>
+            <tr id="table">
+                <th >Brand</th>
+                <th>Product</th>
+                <th>Motion</th>
+                <th><img id="new" style="height: 40%;;" src="Screenshot 2025-03-03 200236.png"></th>
+            </tr>
+        </table>
+        </div>
+        <p id="h9">
+            We partner with <br>forward-thinking <br>enterprises and startups.
+        </p>
+        <img id="img" src="Screenshot 2025-03-09 011907.png">
+        <p id="h10">
+            ________________________________________________________________________________________________________________________________________________________________________________________________________
+        </p>
+        <p id="h11">
+            WORK
+        </p>
+    </section>
+    
+</body>
+</html>
